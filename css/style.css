@@ -1,0 +1,78 @@
+#ext_control{
+    background: rgb(206,239,245);
+    background: linear-gradient(90deg, rgba(206,239,245,1) 21%, rgba(109,228,218,1) 47%, rgba(79,158,219,1) 86%, rgba(52,116,237,1) 99%);
+    width: 100%;
+    padding: 10px 30px 20px 70px;
+    position: relative;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+    z-index: 1000;
+}
+#ext_control.fixed{
+    position: fixed;
+    opacity: 0.7;
+}
+#ext_control:hover {
+    opacity: 1;
+}
+
+#control_title {
+    margin: 0 auto 10px;
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+}
+
+#ctl_year {
+    font-size: 18px;
+    width: 70px;
+    margin-right: 2px;
+}
+#ctl_month {
+    font-size: 18px;
+    margin-right: 2px;
+    margin-left: 10px;
+}
+
+
+#insert_data {
+  width: 140px;
+  height: 25px;
+  margin-left: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: bold;
+  color: #000;
+  background-color: #ffd700;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  }
+#insert_data:hover {
+  background-color: #ff4500;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.6);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+#insert_data:hover {
+    cursor: pointer;
+}
+
+#create_template {
+    margin-top: 15px;
+    margin-right: 20px;
+}
+#create_template:hover {
+    cursor: pointer;
+}
+
+#ext_control a:hover {
+    color: #ff4500;
+}
