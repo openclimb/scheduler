@@ -23,7 +23,6 @@ const work_style = {
   有給: 251
 }
 
-// console.log("content.js開始");
 $(function () {
 
   // 入力枠をヘッダーに固定する
@@ -85,13 +84,10 @@ $(function () {
         const jsonData = JSON.stringify(response);
         const objData = JSON.parse(jsonData);
         let ss_data = objData.sheetData;
-        console.log(ss_data);
         for (let date_data of ss_data) {
           // 日付データでないものは飛ばす
           if (typeof date_data[0] !== 'number')continue;
 
-          // console.log(selected_year, selected_month, date_data[0], date_data[1]);
-          console.log(date_data);
           check_date(selected_year, selected_month, date_data[0]);
           check_work_style(date_data[1], selected_year, selected_month, date_data[0]);
           check_start_time(date_data[1], date_data[2], selected_year, selected_month, date_data[0]);
@@ -116,8 +112,6 @@ $(function () {
       (response) => {
         const jsonData = JSON.stringify(response);
         const objData = JSON.parse(jsonData);
-        // console.log(`backgroundからの戻り値: ${objData}`);
-        // console.log(`${objData.sheetData}`);
       }
     );
   });
@@ -144,7 +138,6 @@ function check_start_time(type, time, year, month, date) {
   const start = "K"+year+"_"+month+"_"+date+"0ST";
   const hour = get_hour(time);
   const minute = get_minute(time);
-  console.log(hour, minute);
 
   if (type === '休日' || type === '有給') {
     $('select[name="'+start+'H"]').val(0);
