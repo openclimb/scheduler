@@ -65,12 +65,49 @@
     cursor: pointer;
 }
 
+/* 無効化されたボタンのスタイル */
+#insert_data:disabled,
+#create_template:disabled {
+    background-color: #cccccc !important;
+    color: #666666 !important;
+    cursor: not-allowed !important;
+    transform: none !important;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1) !important;
+    opacity: 0.6;
+}
+
+#insert_data:disabled:hover,
+#create_template:disabled:hover {
+    background-color: #cccccc !important;
+    color: #666666 !important;
+    transform: none !important;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
 #create_template {
     margin-top: 15px;
     margin-right: 20px;
+    padding: 8px 16px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: #000;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
 }
+
 #create_template:hover {
     cursor: pointer;
+    background-color: #45a049;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
 }
 
 #ext_control a:hover {
